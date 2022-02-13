@@ -1,0 +1,233 @@
+*,
+html,
+body,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    list-style-type: none;
+}
+
+:root {
+    --bg-color: #f7f2f2;
+    --text-color: #0d1117;
+    --dark-bg: #ede9e9;
+    --dark-border-color: #ede9e9;
+    --transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+    --white: #f5f5f5;
+    --primary: #98d0ff;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+a:hover {
+    opacity: 0.7;
+}
+
+.dark-mode {
+    --bg-color: #090c10;
+    --dark-bg: #090c10;
+    --dark-border-color: #30363d;
+    --text-color: #f0f2f8;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+/* components */
+.wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    user-select: none;
+}
+.btn svg {
+    width: 100%;
+}
+
+.btn svg path,
+.btn svg rect {
+    fill: var(--text-color);
+}
+
+.mono {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 700;
+    font-size: 50px;
+    user-select: none;
+}
+.text {
+    font-size: 22px;
+}
+.hint {
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.7;
+    display: inline;
+    margin-left: 10px;
+}
+
+.container {
+    border: 2px solid var(--dark-border-color);
+    border-radius: 20px;
+    background-color: var(--dark-bg);
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    transition: var(--transition);
+}
+.theme-mode-btn-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.theme-mode-ico svg {
+    width: 24px;
+    height: 24px;
+}
+.theme-mode-ico svg path {
+    width: 24px;
+    height: 24px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    font-size: 24px;
+    cursor: pointer;
+}
+.header__menu-btn {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    transition: var(--transition);
+}
+.header__menu-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.header__menu-container:hover {
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 16%);
+}
+.header__menu-container:hover .header__menu-btn {
+    opacity: 0.7;
+}
+.menu {
+    display: none;
+    position: fixed;
+    background-color: var(--bg-color);
+    right: 15px;
+    top: 15px;
+    width: 200px;
+    min-height: 300px;
+    padding: 20px;
+    background-color: var(--dark-bg);
+}
+.menu__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+}
+.menu__list {
+    /* margin-top: 20px; */
+}
+.menu__list li {
+    font-size: 20px;
+    cursor: pointer;
+}
+.menu__list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.menu-active {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-mode-btn span {
+    width: 24px;
+    height: 24px;
+    user-select: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.main .section:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__user-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10000px;
+    overflow: hidden;
+    border: 2px solid var(--dark-border-color);
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+}
+
+.info__user-image img {
+    width: 100%;
+}
+.info__username {
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+.info__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info__block-title {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 32px;
+}
+.info__block-text {
+    margin-top: 5px;
+}
+.info__block-text,
+.info__block-text a {
+    font-size: 24px;
+}
