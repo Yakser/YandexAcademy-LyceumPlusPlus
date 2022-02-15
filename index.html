@@ -22,20 +22,19 @@
         <header class="header">
             <span class="header__logo">Yakser</span>
             <div class="header__menu-container container">
-
                 <span class="header__menu-btn btn" id="js-menu-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect y="44.38" width="100" height="11.24" rx="5.62"/><rect y="16.38" width="100" height="11.24" rx="5.62"/><rect y="72.38" width="100" height="11.24" rx="5.62"/></svg>
                 </span>
             </div>
         </header>
 
-
-
         <main class="main">
-
             <section class="section info">
 
-                <h3 class="mono title">Hello, World!</h3>
+                <div class="anchor" id="anchor-greetings">
+                </div>
+
+                <h3 class="mono title section__header">Hello, World!</h3>
 
                 <header class="info__header">
                     <div class="info__user-image">
@@ -75,9 +74,10 @@
             </section>
 
             <section class="section about">
+                <div class="anchor" id="anchor-about">
+                </div>
                 <header class="section__header about__header">
                     <h3 class="mono title">Обо мне</h3>
-
                 </header>
                 <div class="section__main about__main">
                     <p class="text">
@@ -88,12 +88,12 @@
             </section>
 
             <section class="section works">
+                <div class="anchor" id="anchor-projects">
+                </div>
                 <header class="section__header works__header">
                     <h3 class="mono title">Проекты</h3>
                 </header>
-
                 <div class="projects">
-
                     <article class="project">
                         <header class="project__header">
                             <h4 class="project__title mono">
@@ -275,15 +275,13 @@
                         </div>
                     </article>
 
-
-
-
-
                 </div>
 
             </section>
 
             <footer class="footer">
+                <div class="anchor" id="anchor-socials">
+                </div>
                 <div class="lined-block">
                     <div class="line"></div>
                     <h4 class="footer__title mono">Контакты</h4>
@@ -328,10 +326,16 @@
         </span>
         <ul class="menu__list">
             <li>
-                <span>Главная</span>
+                <a href="#anchor-greetings">Главная</a>
             </li>
             <li>
-                <span>Обо мне</span>
+                <a href="#anchor-about">Обо мне</a>
+            </li>
+            <li>
+                <a href="#anchor-projects">Проекты</a>
+            </li>
+            <li>
+                <a href="#anchor-socials">Контакты</a>
             </li>
             <li>
                 <div class="theme-mode-btn-container">
