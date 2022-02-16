@@ -4,7 +4,6 @@ let closeMenuBtn = document.getElementById("js-close-menu-btn");
 
 menuBtn.addEventListener("click", () => {
     menu.classList.toggle("menu-active");
-    
 });
 
 closeMenuBtn.addEventListener("click", () => {
