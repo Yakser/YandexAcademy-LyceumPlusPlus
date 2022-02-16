@@ -13,12 +13,21 @@ body,
 
 :root {
     --bg-color: #f7f2f2;
+    --bg-transparent-color: #f7f2f244;
     --text-color: #0d1117;
     --dark-bg: #ede9e9;
     --dark-border-color: #ede9e9;
     --transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
     --white: #f5f5f5;
     --primary: #98d0ff;
+}
+
+.dark-mode {
+    --bg-color: #090c10;
+    --bg-transparent-color: #090c1044;
+    --dark-bg: #090c10;
+    --dark-border-color: #30363d;
+    --text-color: #f0f2f8;
 }
 
 a,
@@ -30,13 +39,6 @@ a:visited {
 }
 a:hover {
     opacity: 0.7;
-}
-
-.dark-mode {
-    --bg-color: #090c10;
-    --dark-bg: #090c10;
-    --dark-border-color: #30363d;
-    --text-color: #f0f2f8;
 }
 
 body {
@@ -99,7 +101,6 @@ body {
 }
 .theme-mode-btn-container {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 .theme-mode-ico svg {
@@ -123,6 +124,7 @@ body {
     padding: 10px;
     box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
     border-bottom: 2px solid var(--dark-border-color);
+    background-color: var(--bg-transparent-color);
 }
 .header__logo {
     font-size: 24px;
@@ -155,13 +157,13 @@ body {
     width: 200px;
     min-height: 300px;
     padding: 20px;
-    /* background-color: var(--dark-bg); */
     z-index: 1000;
     background-color: transparent;
     backdrop-filter: blur(20px);
     border-top-right-radius: 0;
     border-top: none;
     border-right: none;
+    background-color: var(--bg-transparent-color);
 }
 .menu__close-btn {
     position: absolute;
@@ -200,18 +202,12 @@ body {
     margin-top: 20px;
     margin-top: 50px;
 }
-.section {
-    /* position: relative; */
-}
+
 .section:not(:last-child) {
     margin-bottom: 50px;
 }
 .section__header {
     margin-bottom: 20px;
-}
-
-.info {
-    /* margin-top: 20px; */
 }
 
 .info__header {
@@ -242,7 +238,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin-top: 20px; */
 }
 
 .info__block {
@@ -443,6 +438,11 @@ body {
     .info__username,
     .info__block-title {
         font-size: 28px;
+        text-align: center;
+    }
+    .info__block-text,
+    .info__block-text a {
+        text-align: center;
     }
     .info__block-text,
     .info__block-text a,
@@ -455,5 +455,8 @@ body {
     }
     .line {
         display: none;
+    }
+    .project {
+        min-height: auto;
     }
 }
